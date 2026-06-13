@@ -3,44 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Umbrella Factory | OEM & ODM Service</title>
+    <title>Xiamen Aikeling | Professional Umbrella Factory OEM & ODM</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; color: #333; }
-        header { background: #2c3e50; color: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; color: #333; overflow-x: hidden; }
+        header { background: #2c3e50; color: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .logo { font-size: 1.5rem; font-weight: bold; }
-        nav a { color: #fff; margin-left: 20px; text-decoration: none; }
-        .btn { background: #e74c3c; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
-        .section { padding: 50px 10%; text-align: center; }
-        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .product-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
-        .contact-form { background: #f4f4f4; padding: 40px 10%; }
-        form { display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; text-align: left; }
-        input, textarea { margin-bottom: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-        footer { background: #2c3e50; color: #fff; padding: 30px 10%; text-align: center; }
-        .social-links a { color: #fff; font-size: 24px; margin: 0 15px; text-decoration: none; }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100; }
-        .whatsapp-float i { margin-top: 16px; }
-
-        .hero { position: relative; height: 80vh; overflow: hidden; color: #fff; text-align: center; }
-        .slides { width: 200%; height: 100%; display: flex; animation: slider 12s infinite ease-in-out; }
+        nav a { color: #fff; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        
+        /* Optimized Carousel CSS */
+        .hero { position: relative; height: 70vh; min-height: 400px; overflow: hidden; background: #000; }
+        .slider { width: 200%; height: 100%; display: flex; animation: slide 12s infinite ease-in-out; }
         .slide { width: 50%; height: 100%; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
-        .slide::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); z-index: 1; }
-        .slide-content { position: relative; z-index: 2; padding: 0 10%; }
-        .slide h1 { font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .slide p { font-size: 1.2rem; margin-bottom: 20px; }
-        @keyframes slider {
+        .slide::after { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); }
+        .slide-content { position: relative; z-index: 10; color: #fff; text-align: center; padding: 0 10%; }
+        .slide h1 { font-size: 3rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .btn { display: inline-block; background: #e74c3c; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; margin-top: 20px; }
+        .btn:hover { background: #c0392b; transform: translateY(-2px); }
+
+        @keyframes slide {
             0%, 45% { transform: translateX(0); }
             55%, 100% { transform: translateX(-50%); }
+        }
+
+        .section { padding: 60px 10%; text-align: center; }
+        h2 { font-size: 2.2rem; margin-bottom: 30px; position: relative; padding-bottom: 10px; }
+        h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: #e74c3c; }
+
+        #video-tour { background: #f9f9f9; }
+        video { max-width: 900px; width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        #about { text-align: left; max-width: 1000px; margin: 0 auto; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product-card { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 10px; transition: 0.3s; }
+        .product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .product-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
+        
+        .contact-form { background: #2c3e50; color: #fff; }
+        form { display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; text-align: left; }
+        input, textarea { margin-bottom: 15px; padding: 12px; border: none; border-radius: 5px; }
+        
+        footer { background: #1a252f; color: #bdc3c7; padding: 40px 10%; text-align: center; }
+        .social-links { margin-bottom: 20px; }
+        .social-links a { color: #fff; font-size: 28px; margin: 0 15px; transition: 0.3s; }
+        .social-links a:hover { color: #e74c3c; }
+        
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 32px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float i { line-height: 60px; }
+
+        @media (max-width: 768px) {
+            .slide h1 { font-size: 2rem; }
+            .section { padding: 40px 5%; }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">UmbrellaExpert</div>
+        <div class="logo">Aikeling Umbrella</div>
         <nav>
             <a href="#about">About</a>
             <a href="#products">Products</a>
             <a href="#contact">Inquiry</a>
         </nav>
+    </header>
+
+    <div class="hero">
+        <div class="slider">
+            <div class="slide" style="background-image: url('https://sc02.alicdn.com/kf/Afe6c3870df3f4cd3b05b29eb8b2b203ck.png');">
+                <div class="slide-content">
+                    <h1>Professional Umbrella Factory</h1>
+                    <p>15 Years Manufacturing Excellence | BSCI & Sedex Certified</p>
+                    <a href="#contact" class="btn">Get a Quote</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://sc02.alicdn.com/kf/A155dc8ba3ee848f8a80e97d0d1b6d948e.png');">
+                <div class="slide-content">
+                    <h1>Global Supply Partner</h1>
+                    <p>Low MOQ | Competitive Pricing | Premium Quality</p>
+                    <a href="#products" class="btn">View Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="video-tour" class="section">
+        <h2>Factory Tour Video</h2>
+        <video controls preload="none" poster="https://sc02.alicdn.com/kf/Afe6c3870df3f4cd3b05b29eb8b2b203ck.png">
+            <source src="factory-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="about" class="section">
+        <h2 style="text-align: center;">About Us</h2>
+        <p><strong>Xiamen Aikeling Import & Export Co., Ltd</strong> is located in Xiamen, Fujian Province, China.</p>
+        <p>1. We have been responsible for professional OEM and ODM projects. We specialize in producing various styles of umbrellas, including but not limited to: folding umbrellas, straight umbrellas, golf umbrellas, children umbrellas, etc. With 15 years of experience as a professional umbrella OEM and ODM supplier, we have passed BSCI, AUV, REACH test and Sedex audit.</p>
+        <p>2. Many styles can be ordered at any time with no minimum order quantity. We are available online for small wholesalers, distributors and low volume sellers.</p>
+        <p>3. We have the most competitive quotes from our factories. We are committed to providing superior quality and competitive products to our valued customers around the world.</p>
+    </div>
+
+    <div id="products" class="section">
+        <h2>Our Core Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1727895546190-efe3e064f902.jpg?auto=format&fit=crop&w=500&q=60" loading="lazy" alt="Golf Umbrella">
+                <h3>Golf Umbrella</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1514884191308-9e1908a58f4e.jpg?auto=format&fit=crop&w=500&q=60" loading="lazy" alt="Folding Umbrella">
+                <h3>Folding Umbrella</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1457131760772-7017c6180f05.jpg?auto=format&fit=crop&w=500&q=60" loading="lazy" alt="Straight Umbrella">
+                <h3>Straight Umbrella</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1613445541636-3611f305753f.jpg?auto=format&fit=crop&w=500&q=60" loading="lazy" alt="Promotion Umbrella">
+                <h3>Promotion Umbrella</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1566205190430-536f5c93d8ca.jpg?auto=format&fit=crop&w=500&q=60" loading="lazy" alt="Reverse Umbrella">
+                <h3>Reverse Umbrella</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1696238384232-CtoSjxVxxGg.jpg?auto=format&fit=crop&w=500&q=60" loading="lazy" alt="Children Umbrella">
+                <h3>Children Umbrella</h3>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1717088463953-ynLbrUkQQFY.jpg?auto=format&fit=crop&w=500&q=60" loading="lazy" alt="Special Umbrella">
+                <h3>Other/Special Umbrellas</h3>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section contact-form">
+        <h2>Send Us an Inquiry</h2>
+        <form action="https://formspree.io/f/xwvjkqjz" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Business Email" required>
+            <textarea name="message" rows="5" placeholder="Inquiry Details (Product, Quantity, etc.)" required></textarea>
+            <button type="submit" class="btn" style="border:none; width: 100%; cursor:pointer;">Send Inquiry Now</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/%E5%AE%9A%E5%B8%B8-%E5%8F%B6-238112340/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/share/1BneBa3M92/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>&copy; 2026 Xiamen Aikeling Import & Export Co., Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/8618054816861" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
